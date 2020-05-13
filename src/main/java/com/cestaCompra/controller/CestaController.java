@@ -14,6 +14,7 @@ import com.cestaCompra.service.CestaService;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin
 public class CestaController {
 	
 	@Autowired
