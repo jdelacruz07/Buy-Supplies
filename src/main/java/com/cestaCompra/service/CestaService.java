@@ -19,6 +19,10 @@ public class CestaService {
 	public CestaDeLaCompra addCesta(CestaDeLaCompra cesta) {
 		return cestaDeLaCompraRepository.save(cesta);
 	}
+
+	public  void deleteId(Integer id) {
+		cestaDeLaCompraRepository.deleteById(id);
+	}
 	
 	
 }

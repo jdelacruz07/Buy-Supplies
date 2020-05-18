@@ -2,7 +2,9 @@ package com.cestaCompra.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,4 +34,9 @@ public class CestaController {
 		return cestaService.addCesta(article);
 	}
 	
+	@DeleteMapping("/{id}")
+	public  void deleteId(@PathVariable Integer id  ) {
+		System.out.println("delete " + id);
+		 cestaService.deleteId(id);
+	}
 }
