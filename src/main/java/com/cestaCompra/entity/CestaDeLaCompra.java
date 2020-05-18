@@ -1,15 +1,21 @@
 package com.cestaCompra.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 @Entity
+@Table(name = "cesta")
 public class CestaDeLaCompra {
 
 	@Id
 	@GeneratedValue
 	Integer id;
+	@NotNull
+	@Column(name = "fruta")
 	String fruit;
 
 	public CestaDeLaCompra() {
