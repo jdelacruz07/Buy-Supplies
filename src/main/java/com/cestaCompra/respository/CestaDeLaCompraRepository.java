@@ -8,6 +8,6 @@ import com.cestaCompra.entity.CestaDeLaCompra;
 
 public interface CestaDeLaCompraRepository extends CrudRepository<CestaDeLaCompra, Integer>   {
 	
-	void deleteById(Integer Id);
+	
 
 }
